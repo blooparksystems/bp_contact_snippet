@@ -1,7 +1,7 @@
 Contact Snippet
 ==================
 
-![Snippet Preview](/static/description/screenshot.jpg?raw=true "Preview")
+![Snippet Preview](/static/description/screenshot.png?raw=true "Preview")
 
 This snippet provides a small lead form for embedding on landing pages and other centent pages of your website. It automatically creates a lead in your Odoo Backend.
 

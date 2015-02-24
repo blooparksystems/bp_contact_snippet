@@ -1,0 +1,101 @@
+<openerp>
+    <data>
+
+        <template id="bp_contact_snippet" name="Contact Snippet" inherit_id="website.assets_frontend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/bp_contact_snippet/static/src/css/main.css" t-ignore="true"/>
+				<script type="text/javascript" src="/bp_contact_snippet/static/src/js/contact_snippet.js"></script>
+            </xpath>
+        </template>
+
+
+        <template id="contact_snippet_body" inherit_id="website.snippets" name="Clean Theme snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="inside">
+                <div>
+                    <div class="oe_snippet_thumbnail">
+                        <img class="oe_snippet_thumbnail_img"
+                             src="/bp_contact_snippet/static/src/img/contact_snippet_thumbnail.png"/>
+                        <span class="oe_snippet_thumbnail_title">Short Contact Form</span>
+                    </div>
+
+                    <section id="contact-snippet" class="oe_snippet_body">
+
+
+                            <div id="successpage" class="container mt64 contact_snipped_hide" style="display: none">
+                                <div class="row">
+                                    <div class="col-md-6 col-md-offset-3">
+
+                                        <div class="alert alert-success mb16">
+                                            <i class="fa fa-check" style="font-size:1.6em"></i>&amp;nbsp<span> DANKE!</span>
+                                            <p>Wir rufen so schnell wie möglich zurück!</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="container contact_snipped_show">
+                                <div class="row">
+                                    <div class="col-md-12 text-center mb16">
+                                        <h3>Lass uns deine Nummer da!</h3>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-md-offset-3">
+                                        <form action="#" method="post" class="form-inline">
+
+                                            <div t-attf-class="col-md-4 form-group #{error and 'contact_name' in error and 'has-error' or ''}">
+                                                <label class="sr-only control-label" for="contact_name">Ihr Name</label>
+                                                <div>
+                                                    <input type="text" class="form-control" name="contact_name"
+                                                           placeholder="Ihr Name" required="True"
+                                                           t-attf-value="#{contact_name or ''}"/>
+                                                </div>
+                                            </div>
+
+                                            <div t-attf-class="col-md-4  form-group #{error and 'phone' in error and 'has-error' or ''}">
+                                                <label class="sr-only control-label" for="phone">Telefon Nummer</label>
+                                                <div>
+                                                    <input type="text" class="form-control" name="phone"
+                                                           placeholder="Ihre Telefonnummer" required="True"
+                                                           t-attf-value="#{phone or ''}"/>
+                                                </div>
+                                            </div>
+
+                                            <div class="hidden">
+                                                <textarea class="form-control" name="description"
+                                                          style="min-height: 120px"
+                                                          required="False">LASS UNS DEINE NUMMER DA!
+                                                </textarea>
+                                            </div>
+
+
+                                            <div class="col-md-4 form-group">
+                                                <div>
+                                                    <button class="btn btn-primary btn-lg contact_snippet">Send</button>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+
+                                </div>
+                                <t t-if="res_company.phone">
+                                    <div class="text-center mt16">
+                                        <p>Oder ruf uns einfach direkt an &amp;nbsp
+                                            <span t-esc="res_company.phone"/>
+                                        </p>
+                                    </div>
+                                </t>
+                            </div>
+
+                    </section>
+                </div>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>

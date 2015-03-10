@@ -58,7 +58,7 @@
                                             <div t-attf-class="col-md-4  form-group #{error and 'phone' in error and 'has-error' or ''}">
                                                 <label class="sr-only control-label" for="phone">Telefon Nummer</label>
                                                 <div>
-                                                    <input type="tel" pattern="/^[0-9-+]+$/" title="Nur Nummern" class="form-control" name="phone"
+                                                     <input type="number" class="form-control" name="phone"
                                                            placeholder="Ihre Telefonnummer" required="True"
                                                            t-attf-value="#{phone or ''}"/>
                                                 </div>

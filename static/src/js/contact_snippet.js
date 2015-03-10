@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $('body').on('click', 'button.contact_snippet', function (ev) {
         var $link = $(ev.target);
-        var form =  $link.parent().parent().parent();
+        var form =  $link.closest('.call-me');
         if (form[0].checkValidity()) {
             //prevent the form from doing a submit
             ev.preventDefault();

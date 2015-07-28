@@ -20,16 +20,11 @@
 ##############################################################################
 {
     'name': "Contact Snippet",
-
-    'summary': """
-    Contact Snippet""",
-
-    'description': """
-    Provide custom contact snippet""",
-
+    'summary': """Contact Snippet""",
+    'description': """Provide custom contact snippet""",
     'author': "bloopark systems GmbH & Co. KG",
     'website': "http://www.bloopark.de",
-
+    'license': 'AGPL-3',
     'category': 'Modal',
     'version': '1.0',
 
@@ -41,9 +36,4 @@
         'views/form.xml'
     ],
 
-    'demo': [
-    ],
-
-    'tests': [
-    ],
 }
